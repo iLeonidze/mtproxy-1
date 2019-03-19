@@ -33,9 +33,4 @@ COPY docker-entrypoint.sh /
 VOLUME /data
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD [ \
-  "--http-ports", "$PORT", \
-  "--slaves", "2", \
-  "--max-special-connections", "60000", \
-  "--allow-skip-dh" \
-]
+CMD --http-ports $PORT --slaves 2 --max-special-connections 60000 --allow-skip-dh
