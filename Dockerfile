@@ -31,7 +31,6 @@ COPY --from=0 /mtproxy/sources/objs/bin/mtproto-proxy .
 COPY docker-entrypoint.sh /
 
 VOLUME /data
-EXPOSE $PORT
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD [ \
